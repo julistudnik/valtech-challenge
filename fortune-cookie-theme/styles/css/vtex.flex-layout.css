@@ -35,37 +35,41 @@
 }
 /*footer*/
 .flexRow--footer-row {
-  background-color: #000;
+  background-color: #f0f0f0;
   padding: 2rem;
-  color: #fff;
+  color: black;
 }
-
+.flexColChild--footer-logo {
+  align-content: center;
+}
 .flexColChild--footer-links {
     display: flex;
     align-content: center;
     justify-content: center;
     align-items: center;
 }
-
 .flexCol--footer-logo,
 .flexCol--footer-copy {
   display: flex;
   align-items: center;
 }
 
-/* Target al row que contiene los links */
 .flexRow--footer-links-row {
   display: flex;
   width: 100%;
 }
 
-/* Cada link ocupa el mismo espacio */
 .flexRow--footer-links-row :global(.vtex-store-link-0-x-label--footer-link) {
-  flex: 1;                     /* distribuye el ancho equitativamente */
-  text-align: center;          /* centro de cada casilla */
-  white-space: nowrap;         /* evita el wrap de “Cookie Fortune” */
+  flex: 1;  
+  text-align: center; 
+  white-space: nowrap; 
 }
 
-
-
-
+@media(max-width:767px){
+  
+  .flexColChild--footer-logo {
+    position: relative;
+    bottom: 10px;
+  } 
+  
+}

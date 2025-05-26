@@ -1,3 +1,8 @@
 .imageElement--fortune-image {
     max-height: 400px;
 }
+@media(max-width:767px){
+    .imageElement--home-image {
+        margin-top: 30px;
+    }
+}

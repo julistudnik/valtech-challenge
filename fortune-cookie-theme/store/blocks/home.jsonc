@@ -65,7 +65,8 @@
       "width": 500,
       "src": "https://cdn0.uncomo.com/es/posts/4/8/8/como_hacer_galletas_de_la_fortuna_51884_600.webp",
       "alt": "Valtech Fortune Cookie",
-      "title": "Valtech Fortune Cookie"
+      "title": "Valtech Fortune Cookie",
+      "blockClass":"home-image"
     }
   }
 }

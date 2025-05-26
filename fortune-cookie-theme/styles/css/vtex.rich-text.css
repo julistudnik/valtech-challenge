@@ -1,5 +1,6 @@
 .paragraph--footer-copy-text {
-    color: white;
+    color: black;
+    text-align: center;
 }
 .paragraph--fortune-title {
     text-align: center;
@@ -17,4 +18,10 @@
     text-transform: uppercase;
     font-weight: 600;
     cursor: pointer;
+}
+@media(max-width:767px){
+    .heading--home-intro{
+        font-size:2rem;
+        padding: 20px;
+    }
 }

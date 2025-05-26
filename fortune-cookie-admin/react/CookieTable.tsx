@@ -1,6 +1,6 @@
 // react/CookieTable.tsx
-import React, { useState, useEffect } from 'react'
-import { Table, Button, IconEdit, IconDelete } from 'vtex.styleguide'
+import React, { useState, useContext, useEffect } from 'react'
+import { Table, Button, IconEdit, IconDelete, ToastContext } from 'vtex.styleguide'
 import { useMutation } from 'react-apollo'
 
 import CREATE_DOCUMENT from './graphql/mutations/createDocument.gql'
@@ -19,8 +19,7 @@ const CookieTable: React.FC = () => {
   const [items, setItems]             = useState<Doc[]>([])
   const [isModalOpen, setModalOpen]   = useState(false)
   const [editingDoc, setEditingDoc]   = useState<Doc | null>(null)
-  const [message, setMessage]         = useState<string>()
-  const [messageType, setMessageType] = useState<'success' | 'error'>()
+  const { showToast } = useContext(ToastContext)
 
   // GraphQL mutations
   const [createDocument] = useMutation(CREATE_DOCUMENT)
@@ -41,19 +40,13 @@ const CookieTable: React.FC = () => {
       setItems(data)
     } catch (e) {
       console.error('loadAll error', e)
-      setMessage('No se pudo cargar las frases')
-      setMessageType('error')
+      showToast({ message: 'Error al cargar las frases', duration: 3000, type: 'error' })
     }
   }
 
   useEffect(() => {
     loadAll()
   }, [])
-
-  const clearMessage = () => {
-    setMessage(undefined)
-    setMessageType(undefined)
-  }
 
   const openNew  = ()      => { setEditingDoc(null);    setModalOpen(true) }
   const openEdit = (row: Doc) => { setEditingDoc(row);    setModalOpen(true) }
@@ -88,13 +81,15 @@ const CookieTable: React.FC = () => {
         })
       }
 
-      setMessage(editingDoc ? 'Frase editada correctamente' : 'Registro creado correctamente')
-      setMessageType('success')
+      if(editingDoc) {
+        showToast({ message: 'Frase editada correctamente', duration: 3000, type: 'success' })  
+        } else {
+        showToast({ message: 'Registro creado correctamente', duration: 3000, type: 'success' })
+      }
       await loadAll()
     } catch (e) {
       console.error('save error', e)
-      setMessage('No se pudo guardar la frase')
-      setMessageType('error')
+      showToast({ message: 'Error al guardar la frase', duration: 3000, type: 'error' })
     }
   }
 
@@ -107,48 +102,16 @@ const CookieTable: React.FC = () => {
           documentId: row.id,
         },
       })
-      setMessage('Frase eliminada')
-      setMessageType('success')
+      showToast({ message: 'Frase eliminada', duration: 3000, type: 'success' })
       await loadAll()
     } catch (e) {
       console.error('delete error', e)
-      setMessage('No se pudo eliminar la frase')
-      setMessageType('error')
+      showToast({ message: 'Error al eliminar la frase', duration: 3000, type: 'error' })
     }
   }
 
   return (
     <>
-      {message && (
-        <div
-          style={{
-            position: 'relative',
-            marginBottom: '1rem',
-            padding: '0.75rem 1rem',
-            borderRadius: 4,
-            color:  messageType==='success' ? '#155724' : '#721c24',
-            background: messageType==='success' ? '#d4edda' : '#f8d7da',
-            border: messageType==='success' ? '1px solid #c3e6cb' : '1px solid #f5c6cb',
-          }}
-        >
-          {message}
-          <button
-            onClick={clearMessage}
-            style={{
-              position: 'absolute',
-              top: 4,
-              right: 8,
-              border: 'none',
-              background: 'transparent',
-              fontSize: '1.2rem',
-              cursor: 'pointer',
-              color: messageType==='success' ? '#155724' : '#721c24',
-            }}
-            aria-label="Cerrar mensaje"
-          >×</button>
-        </div>
-      )}
-
       <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 16 }}>
         <Button variation="primary" onClick={openNew}>Agregar nueva frase</Button>
       </div>

@@ -1,0 +1,26 @@
+[
+  {
+    "section": "orders",
+    "titleId": "admin-example.navigation.label-group",
+    "subSection": "example",
+    "searchKeyWordsHelpers": "admin-example.navigation.search.kws",
+    "subSectionItems": [
+      {
+        "labelId": "admin-example.navigation.label-table",
+        "path": "/admin/example",
+        "searchKeyWordsHelpers": "admin-example.navigation.table.search.kws"
+      }
+    ]
+  },
+  {
+    "section": "orders",
+    "titleId": "admin/fortuneCookie.section.title",
+    "subSection": "fortuneCookie",
+    "subSectionItems": [
+      {
+        "labelId": "admin/fortuneCookie.menu.label",
+        "path": "/admin/app/fortune-cookie"
+      }
+    ]
+  }
+]

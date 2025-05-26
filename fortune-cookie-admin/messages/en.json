@@ -1,0 +1,21 @@
+{
+  "admin-example.navigation.label-group": "Example admins",
+  "admin-example.navigation.label-table": "Example table",
+  "admin-example.navigation.search.kws": "test, mock, fake",
+  "admin-example.navigation.details.search.kws": "details, mock, test, hello",
+  "admin-example.navigation.table.search.kws": "table, mock, test, bye",
+  "admin-example.hello-world": "Example Admin",
+  "admin-example.details": "Details page",
+  "admin/fortuneCookie.section.title": "Fortune cookies",
+  "admin/fortuneCookie.menu.label": "Manage phrases",
+  "cookieTable.column.phrase": "Phrase",
+  "cookieTable.column.lucky": "Lucky number",
+  "cookieTable.column.actions": "Actions",
+  "cookieTable.action.edit": "Edit",
+  "cookieTable.action.delete": "Delete",
+  "cookieTable.modal.title.new": "New fortune",
+  "cookieTable.modal.title.edit": "Edit fortune",
+  "cookieTable.modal.field.phrase": "Fortune phrase",
+  "cookieTable.modal.save": "Save",
+  "cookieTable.modal.cancel": "Cancel"
+}

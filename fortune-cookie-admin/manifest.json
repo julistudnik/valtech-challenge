@@ -1,0 +1,21 @@
+{
+  "name": "fortune-cookie",
+  "vendor": "valtech",
+  "version": "0.0.1",
+  "title": "Fortune Cookie App",
+  "description": "Fortune cookie description",
+  "mustUpdateAt": "2022-08-28",
+  "scripts": {
+    "postreleasy": "vtex publish"
+  },
+  "dependencies": {
+    "vtex.styleguide": "9.x"
+  },
+  "builders": {
+    "react": "3.x",
+    "admin": "0.x",
+    "messages": "1.x",
+    "docs": "0.x"
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

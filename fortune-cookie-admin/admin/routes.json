@@ -1,0 +1,14 @@
+{
+  "admin.app.example": {
+    "component": "AdminExample",
+    "path": "/admin/app/example"
+  },
+  "admin.app.example-detail": {
+    "component": "AdminExampleDetail",
+    "path": "/admin/app/example/:id"
+  },
+  "admin.app.fortuneCookie": {
+    "component": "FortuneAdminPage",
+    "path": "/admin/app/fortune-cookie"
+  }
+}

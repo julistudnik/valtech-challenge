@@ -1,4 +1,3 @@
-// react/CookieTable.tsx
 import React, { useState, useContext, useEffect } from 'react'
 import { Table, Button, IconEdit, IconDelete, ToastContext } from 'vtex.styleguide'
 import { useMutation } from 'react-apollo'

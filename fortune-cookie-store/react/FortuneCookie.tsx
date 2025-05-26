@@ -24,7 +24,12 @@ const FortuneCookie: React.FC = () => {
   const handleClick = async () => {
     setLoading(true)
     try {
-      const res = await fetch('/api/dataentities/CF/search?_fields=CookieFortune&_size=10')
+       const res = await fetch('/api/dataentities/CF/search?_fields=CookieFortune',{
+        headers: {
+          'rest-range': 'resources=0-99',
+        },
+      }
+      )
       const data = await res.json()
       if (data && data.length > 0) {
         const randomIndex = Math.floor(Math.random() * data.length)
@@ -59,7 +64,7 @@ const FortuneCookie: React.FC = () => {
 
       {phrase && (
         <h3 className={handles.cookiePhrase}>
-          " {phrase}"
+          "{phrase}"
         </h3>
       )}
 

@@ -1,0 +1,44 @@
+{
+  "menu#desktop": {
+    "children": ["menu-item#home", "menu-item#cookie"],
+    "props": {
+      "orientation": "horizontal",
+      "blockClass": "nav"
+    }
+  },
+  "menu-item#home": {
+    "props": {
+    "id": "menu-item-home",
+    "type": "custom",
+    "highlight": false,
+    "itemProps": {
+      "type": "internal",
+      "href": "/",
+      "noFollow": false,
+      "tagTitle": "Shop",
+      "text": "Home"
+    }
+    }
+  },
+  "menu-item#cookie": {
+    "props": {
+      "id": "menu-item-fortune-cookie",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+      "type": "internal",
+      "href": "/fortune-cookie",
+      "noFollow": false,
+      "tagTitle": "Cookie Fortune",
+      "text": "Cookie Fortune"
+      }
+    }
+  },
+  "menu#mobile": {
+    "children": ["menu-item#home", "menu-item#cookie"],
+    "props": {
+      "orientation": "vertical",
+      "blockClass": "nav"
+    }
+  }
+}

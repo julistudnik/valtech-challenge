@@ -1,0 +1,101 @@
+{
+  "footer": {
+    "blocks": ["footer-layout.desktop", "footer-layout.mobile"]
+  },
+
+  "footer-layout.desktop": {
+    "children": ["flex-layout.row#footer-row"]
+  },
+
+  "footer-layout.mobile": {
+    "children": ["flex-layout.row#footer-row"]
+  },
+
+  "flex-layout.row#footer-row": {
+    "props": {
+      "horizontalAlign": "space-between",
+      "verticalAlign": "center",
+      "blockClass": "footer-row"
+    },
+    "children": [
+      "flex-layout.col#footer-logo",
+      "flex-layout.col#footer-links",
+      "flex-layout.col#footer-copy"
+    ]
+  },
+
+  "flex-layout.col#footer-logo": {
+    "children": ["image#footer-logo"],
+    "props": {
+      "blockClass": "footer-logo"
+    }
+  },
+
+  "image#footer-logo": {
+    "props": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Valtech_logo.png/800px-Valtech_logo.png",
+      "alt": "Valtech Logo",
+      "width": 100
+    }
+  },
+
+  "flex-layout.col#footer-links": {
+    "children": [
+      "flex-layout.row#footer-links"
+    ],
+    "props": {
+      "blockClass": "footer-links"
+    }
+  },
+
+  "flex-layout.row#footer-links": {
+    "props": {
+      "horizontalAlign": "space-between",
+      "verticalAlign": "center",
+      "blockClass": "footer-links-row"
+    },
+    "children": [
+      "link#footer-home",
+      "link#footer-cookie",
+      "link#footer-contact"
+    ]
+  },
+
+  "link#footer-home": {
+    "props": {
+      "label": "Home",
+      "href": "/",
+      "blockClass": "footer-link"
+    }
+  },
+
+  "link#footer-cookie": {
+    "props":{
+      "href": "/fortune-cookie",
+      "blockClass": "footer-link",
+      "label":"Cookie Fortune"
+    }
+  },
+
+  "link#footer-contact": {
+    "props": {
+      "label": "Contact",
+       "href": "",
+      "blockClass": "footer-link"
+    }
+  },
+
+  "flex-layout.col#footer-copy": {
+    "children": ["rich-text#footer-copy"],
+    "props": {
+      "blockClass": "footer-copy"
+    }
+  },
+
+  "rich-text#footer-copy": {
+    "props": {
+      "text": "© 2025 Valtech. Todos los derechos reservados.",
+      "blockClass": "footer-copy-text"
+    }
+  }
+}

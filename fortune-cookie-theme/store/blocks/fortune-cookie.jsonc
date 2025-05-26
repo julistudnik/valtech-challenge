@@ -1,0 +1,48 @@
+{
+  "store.custom#fortune-cookie": {
+    "title": "Fortune Cookie",
+    "blocks": [
+      "flex-layout.row#fortune-wrapper"
+    ]
+  },
+
+  "flex-layout.row#fortune-wrapper": {
+    "children": [
+      "flex-layout.col#fortune-content",
+      "image#fortune-image"
+    ],
+    "props": {
+      "blockClass": "fortune-wrapper",
+      "horizontalAlign": "center",
+      "verticalAlign": "center"
+    }
+  },
+
+  "image#fortune-image": {
+    "props": {
+      "src": "https://cdn0.uncomo.com/es/posts/4/8/8/como_hacer_galletas_de_la_fortuna_51884_600.webp",
+      "alt": "Fortune Cookie Image",
+      "title": "Fortune Cookie",
+      "width": 500,
+      "blockClass": "fortune-image"
+    }
+  },
+
+  "flex-layout.col#fortune-content": {
+    "children": [
+      "rich-text#fortune-title",
+      "fortune-cookie"
+    ],
+    "props": {
+      "width": "50%",
+      "blockClass": "fortune-content"
+    }
+  },
+  "rich-text#fortune-title": {
+    "props": {
+      "text": "No esperes a que las cosas sucedan, haz que sucedan ",
+      "blockClass": "fortune-title",
+      "textAlign": "center"
+    }
+  }
+}

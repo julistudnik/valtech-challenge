@@ -1,0 +1,32 @@
+{
+  "vendor": "valtech",
+  "name": "fortune-cookie-store",
+  "version": "1.0.1",
+  "title": "Fortune Cookie Module",
+  "description": "Módulo que muestra una frase aleatoria y un número de la suerte",
+  "builders": {
+    "react": "3.x",
+    "store": "0.x"
+  },
+  "dependencies": {
+    "vtex.styleguide": "9.x",
+    "vtex.css-handles": "0.x"
+  },
+  "settingsSchema": {
+    "title": "API Credentials",
+    "type": "object",
+    "properties": {
+      "appKey": {
+        "title": "App Key",
+        "type": "string",
+        "default": ""
+      },
+      "appToken": {
+        "title": "App Token",
+        "type": "string",
+        "default": ""
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

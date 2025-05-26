@@ -1,0 +1,71 @@
+{
+  "store.home": {
+    "blocks": [
+      "responsive-layout.desktop#home",
+      "responsive-layout.mobile#home"
+    ]
+  },
+
+  "responsive-layout.desktop#home": {
+    "children": [
+      "flex-layout.row#everything"
+    ]
+  },
+
+  "flex-layout.row#everything": {
+    "children": [
+      "flex-layout.col#text",
+      "flex-layout.col#image"
+    ],
+    "props": {
+      "blockClass": "home-row"
+    }
+  },
+
+  "flex-layout.col#text": {
+    "children": ["rich-text#textIntro"],
+    "props": {
+      "width": "50%",
+      "blockClass": "home-col"
+    }
+  },
+
+  "flex-layout.col#image": {
+    "children": ["image#imageIntro"],
+    "props": {
+      "width": "50%",
+      "blockClass": "home-col"
+    }
+  },
+
+  "responsive-layout.mobile#home": {
+    "children": [
+      "flex-layout.row#everythingMobile"
+    ]
+  },
+
+  "flex-layout.row#everythingMobile": {
+    "children": [
+      "rich-text#textIntro",
+      "image#imageIntro"
+    ]
+  },
+
+  "rich-text#textIntro": {
+    "props": {
+      "text": "# Ingresá a ver qué suerte te espera\n\n[Quiero mi galleta](/fortune-cookie)",
+      "textPosition": "CENTER",
+      "textAlignment": "CENTER",
+      "blockClass": "home-intro"
+    }
+  },
+
+  "image#imageIntro": {
+    "props": {
+      "width": 500,
+      "src": "https://cdn0.uncomo.com/es/posts/4/8/8/como_hacer_galletas_de_la_fortuna_51884_600.webp",
+      "alt": "Valtech Fortune Cookie",
+      "title": "Valtech Fortune Cookie"
+    }
+  }
+}

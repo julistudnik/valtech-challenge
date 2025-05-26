@@ -1,0 +1,28 @@
+/* .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+  }
+  
+  .button {
+    min-width: 140px;
+  }
+  
+  .phrase {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+  
+  .luckyNumber {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* ≥ 768 px */
+  /* @media (min-width: 48rem) {
+    .phrase {
+      font-size: 1.75rem;
+    }
+  }
+   */ 

@@ -1,0 +1,71 @@
+.flexRow--home-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.flexCol--home-col {
+  padding: 1rem;
+}
+
+.flexRow--fortune-wrapper {
+   display: flex;
+  justify-content: center;   /* o space-around/space-between si preferís */
+  align-items: flex-start;    /* <-- alinea los items desde arriba */
+  padding: 4rem 2rem;
+  background-color: white;
+  gap: 2rem;   
+}
+
+
+.flexCol--fortune-content {
+  flex: 0 0 400px;          
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.flexCol--fortune-image,
+.image--fortune-image {     
+  flex: 0 0 400px;           
+  max-width: 400px;
+}
+/*footer*/
+.flexRow--footer-row {
+  background-color: #000;
+  padding: 2rem;
+  color: #fff;
+}
+
+.flexColChild--footer-links {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexCol--footer-logo,
+.flexCol--footer-copy {
+  display: flex;
+  align-items: center;
+}
+
+/* Target al row que contiene los links */
+.flexRow--footer-links-row {
+  display: flex;
+  width: 100%;
+}
+
+/* Cada link ocupa el mismo espacio */
+.flexRow--footer-links-row :global(.vtex-store-link-0-x-label--footer-link) {
+  flex: 1;                     /* distribuye el ancho equitativamente */
+  text-align: center;          /* centro de cada casilla */
+  white-space: nowrap;         /* evita el wrap de “Cookie Fortune” */
+}
+
+
+
+

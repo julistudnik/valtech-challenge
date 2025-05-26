@@ -1,0 +1,20 @@
+.paragraph--footer-copy-text {
+    color: white;
+}
+.paragraph--fortune-title {
+    text-align: center;
+    font-size: 1.75rem;
+    line-height: 29px;
+    color: black;
+    font-weight: 600;
+}
+.link--home-intro {
+    color: white;
+    background-color: #c47b39;
+    padding: 10px;
+    border-radius: 9px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+}

@@ -1,0 +1,7 @@
+.git/
+react/node_modules/
+.eslintrc
+.gitignore
+README.md
+*.test.tsx
+mocks.tsx

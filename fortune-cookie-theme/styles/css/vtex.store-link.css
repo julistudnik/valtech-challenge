@@ -1,0 +1,23 @@
+.link--footer-link {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  text-align: center;
+}
+.link--footer-info {
+    color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link--footer-link:hover {
+  color: #f59e0b;
+}
+
+.footer-copy-text {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+

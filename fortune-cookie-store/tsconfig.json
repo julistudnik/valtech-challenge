@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "target": "ES2017",
+      "module": "esnext",
+      "jsx": "react",
+      "lib": ["dom", "dom.iterable", "es2017"],
+      "types": ["react", "react-dom"],
+      "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "noEmit": true
+    },
+    "include": ["react/**/*"]
+}

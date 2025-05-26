@@ -1,0 +1,5 @@
+mutation updateDocument($acronym: String!, $document: DocumentInput) {
+  updateDocument(acronym: $acronym, document: $document){
+    documentId    
+  }
+}

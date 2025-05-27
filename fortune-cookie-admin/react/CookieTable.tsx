@@ -47,9 +47,9 @@ const CookieTable: React.FC = () => {
     loadAll()
   }, [])
 
-  const openNew  = ()      => { setEditingDoc(null);    setModalOpen(true) }
-  const openEdit = (row: Doc) => { setEditingDoc(row);    setModalOpen(true) }
-  const closeModal = ()    => { setModalOpen(false);    setEditingDoc(null) }
+  const openNew  = () => { setEditingDoc(null); setModalOpen(true) }
+  const openEdit = (row: Doc) => { setEditingDoc(row); setModalOpen(true) }
+  const closeModal = () => { setModalOpen(false); setEditingDoc(null) }
 
   // Handlers CRUD via GraphQL:
   const handleSave = async (saved: boolean, data?: { phrase: string }) => {
@@ -97,7 +97,7 @@ const CookieTable: React.FC = () => {
     try {
       await deleteDocument({
         variables: {
-          acronym:    DATA_ENTITY,
+          acronym: DATA_ENTITY,
           documentId: row.id,
         },
       })

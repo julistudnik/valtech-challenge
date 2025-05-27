@@ -8,7 +8,7 @@ Incluye las tres apps pedidas, separadas en carpetas:
 |------|-----------|----------------------|
 | **1** | **Store App** (`store/`) | • Renderiza un botón y dos labels (h3 y h5).<br>• Al hacer click trae una **frase aleatoria** desde la entidad **CF** de Master Data, la guarda en estado y muestra:<br> • `h3` → frase<br> • `h5` → número de la suerte en formato **XX-XX-XXXX**.<br>• Mientras carga muestra un spinner.<br>• Oculta los labels hasta tener datos. |
 | **2** | **Landing Theme** (`theme/`) | • Crea una landing page para embedir el módulo de la Fase 1.<br>• Estiliza el módulo desde el *store theme* siguiendo **Mobile-First**.<br>• Incluye optimizaciones de CLS y uso de CSS Handles. |
-| **3** | **Admin App** (`admin/`) | • Tabla con todos los registros de la entidad **CF**.<br>• Modal para **agregar** nuevas frases.<br>• Opción de **eliminar** registros.<br>• Feedback al usuario mediante toasts de `vtex.styleguide`. |
+| **3** | **Admin App** (`admin/`) | • Tabla con todos los registros de la entidad **CF**.<br>• Modal para **agregar** nuevas frases.<br>• Opción de **eliminar** registros.<br>• Feedback al usuario mediante toasts de `vtex.styleguide`<br>. https://cookiefortune--valtech.myvtex.com/admin/app/fortune-cookie |
 
 ---
 
@@ -23,6 +23,7 @@ Incluye las tres apps pedidas, separadas en carpetas:
 > Cada app tiene su propio `manifest.json` y puede **linkearse** individualmente con `vtex link`.
 
 ---
+
 
 
 
